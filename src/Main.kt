@@ -26,14 +26,23 @@ import kotlin.math.round
 //}
 
 // cociendo huevos
+//fun main(){
+//    val secuencias= generateSequence {
+//        val linea= readln()
+//        if (linea != "0 0") linea else null
+//    }
+//    secuencias.forEach {
+//        val (huevos, capacidad) = it.split(" ").map { it.toDouble() }
+//        val veces = huevos/capacidad
+//        println(ceil(veces).toInt()*10)
+//    }
+//}
+
+// contando en la arena
 fun main(){
     val secuencias= generateSequence {
-        val linea= readln()
-        if (linea != "0 0") linea else null
+        val num_unos= readln().toInt()
+        if (num_unos!=0) "1".repeat(num_unos) else null
     }
-    secuencias.forEach {
-        val (huevos, capacidad) = it.split(" ").map { it.toDouble() }
-        val veces = huevos/capacidad
-        println(ceil(veces).toInt()*10)
-    }
+    secuencias.forEach { println(it) }
 }
