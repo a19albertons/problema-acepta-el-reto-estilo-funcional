@@ -39,10 +39,22 @@ import kotlin.math.round
 //}
 
 // contando en la arena
-fun main(){
+//fun main(){
+//    val secuencias= generateSequence {
+//        val num_unos= readln().toInt()
+//        if (num_unos!=0) "1".repeat(num_unos) else null
+//    }
+//    secuencias.forEach { println(it) }
+//}
+
+// El dia de navidad
+fun main() {
+    val num_casos = readln().toInt()
     val secuencias= generateSequence {
-        val num_unos= readln().toInt()
-        if (num_unos!=0) "1".repeat(num_unos) else null
+        val linea = readln()
+        linea
+    }.take(num_casos)
+    secuencias.forEach {
+        if (it=="25 12") println("SI") else println("NO")
     }
-    secuencias.forEach { println(it) }
 }
